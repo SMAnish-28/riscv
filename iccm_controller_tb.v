@@ -95,35 +95,6 @@ module tb_iccm_controller;
         #10;
         cntlr_rd = 1;
         cntlr_raddr = 11'd10;
-module sram_8kb #(
-    parameter ADDR_WIDTH = 11,
-    parameter DATA_WIDTH = 32
-)(
-    input clk,
-    input rd_en,
-    input [ADDR_WIDTH-1:0]rd_addr,
-    output reg [DATA_WIDTH-1:0]rd_data,
-
-    input wr_en,
-    input [ADDR_WIDTH-1:0]wr_addr,
-    input [DATA_WIDTH-1:0]wr_data
-);
-
-    reg [DATA_WIDTH-1:0] mem [0:(1<<ADDR_WIDTH)-1];
-
-    /* Write */
-    always @(posedge clk) begin
-        if (wr_en)
-            mem[wr_addr] <= wr_data;
-    end
-
-    /* Read  */
-    always @(*) begin
-        if (rd_en)
-            rd_data <= mem[rd_addr];
-    end
-
-endmodule
 
         #10;
         cntlr_rd = 0;
@@ -133,5 +104,6 @@ endmodule
         #20;
         $finish;
     end
+
 
 endmodule
