@@ -74,8 +74,8 @@ module pc_block (
     always @(*) begin
     case (pc_sel)
         2'b00: pc_next = pc_plus4;
-        2'b01: pc_next = alu_addr;
-        2'b10: pc_next = imm_addr;
+        2'b01: pc_next = imm_addr;
+        2'b10: pc_next = alu_addr;
         2'b11: pc_next = hold;
         default: pc_next = pc_plus4;
     endcase
@@ -87,4 +87,5 @@ module pc_block (
         else if (pc_en)
         pc <= pc_next;
     end
+
 endmodule
