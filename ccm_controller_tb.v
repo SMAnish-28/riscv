@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_iccm_controller;
+module ccm_controller_tb;
 
     localparam ADDR_WIDTH = 11;
     localparam DATA_WIDTH = 32;
@@ -28,7 +28,7 @@ module tb_iccm_controller;
     wire [DATA_WIDTH-1:0]  mem_wr_data;
 
     /* DUT */
-    iccm_controller dut (
+    ccm_controller dut (
         .clk(clk),
         .rst_n(rst_n),
 
@@ -65,8 +65,8 @@ module tb_iccm_controller;
     always #5 clk = ~clk;
 
     initial begin
-        $dumpfile("iccm_waveform.vcd");
-        $dumpvars(0, tb_iccm_controller);
+        $dumpfile("ccm_waveform.vcd");
+        $dumpvars(0, ccm_controller_tb);
     end
 
     /* Test */
@@ -95,7 +95,6 @@ module tb_iccm_controller;
         #10;
         cntlr_rd = 1;
         cntlr_raddr = 11'd10;
-
         #10;
         cntlr_rd = 0;
 
@@ -104,6 +103,5 @@ module tb_iccm_controller;
         #20;
         $finish;
     end
-
 
 endmodule
