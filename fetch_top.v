@@ -1,112 +1,16 @@
-// `timescale 1ns/1ps
-
-// module fetch_top();
-//     parameter ADDR_WIDTH = 11;   // 2048 words
-//     parameter DATA_WIDTH = 32;
-
-//     reg pc_sel;
-//     reg [ADDR_WIDTH-1:0] alu_addr;
-//     reg [ADDR_WIDTH-1:0] imm_addr;
-    
-//     reg clk;
-//     reg rst_n;
-
-//     reg cntlr_rd;
-//     wire [DATA_WIDTH-1:0] cntlr_rd_data;
-//     wire cntlr_rd_valid;
-
-//     reg cntlr_wr;
-//     reg [ADDR_WIDTH-1:0]cntlr_waddr;
-//     reg [DATA_WIDTH-1:0]cntlr_wr_data;
-
-//     wire mem_rd;
-//     wire [ADDR_WIDTH-1:0]mem_rd_addr;
-//     reg [DATA_WIDTH-1:0]mem_rd_data;
-
-//     wire mem_wr;
-//     wire [ADDR_WIDTH-1:0]mem_wr_addr;
-//     wire [DATA_WIDTH-1:0]mem_wr_data;
-
-//     fetch #(
-//         .ADDR_WIDTH(ADDR_WIDTH),
-//         .DATA_WIDTH(DATA_WIDTH)
-//     ) fetch_inst (
-//         .pc_sel(pc_sel),
-//         .alu_addr(alu_addr),
-//         .imm_addr(imm_addr),
-//         .clk(clk),
-//         .rst_n(rst_n),
-//         .cntlr_rd(cntlr_rd),
-//         .cntlr_rd_data(cntlr_rd_data),
-//         .cntlr_rd_valid(cntlr_rd_valid),
-//         .cntlr_wr(cntlr_wr),
-//         .cntlr_waddr(cntlr_waddr),
-//         .cntlr_wr_data(cntlr_wr_data),
-//         .mem_rd(mem_rd),
-//         .mem_rd_addr(mem_rd_addr),
-//         .mem_rd_data(mem_rd_data),
-//         .mem_wr(mem_wr),
-//         .mem_wr_addr(mem_wr_addr),
-//         .mem_wr_data(mem_wr_data)
-//     );
-
-//     sram_8kb #(
-//         .ADDR_WIDTH(ADDR_WIDTH),
-//         .DATA_WIDTH(DATA_WIDTH)
-//     ) sram_inst (
-//         .clk(clk),
-//         .rd_en(mem_rd),
-//         .rd_addr(mem_rd_addr),
-//         .rd_data(mem_rd_data),
-//         .wr_en(mem_wr),
-//         .wr_addr(mem_wr_addr),
-//         .wr_data(mem_wr_data)
-//     );
-
-//     always #5 clk = ~clk;
-
-//     initial begin
-//         $dumpfile("fetch_top.vcd"); 
-//         $dumpvars (0, fetch_top);
-
-//         // Initialize signals
-//         clk = 0;
-//         rst_n = 0;
-//         pc_sel = 0;
-//         alu_addr = 11'b0;
-//         imm_addr = 11'b0;
-//         cntlr_rd = 0;
-//         cntlr_wr = 0;
-//         cntlr_waddr = 11'b0;
-//         cntlr_wr_data = 32'b0;
-
-//         // Release reset
-//         #15;
-//         rst_n = 1;
-
-//         // Add your test sequences here
-//         #2;
-
-
-//         #100;
-//         $finish;
-//     end
-
-// endmodule
-
 `timescale 1ns/1ps
 
 module fetch_top();
     parameter ADDR_WIDTH = 11;   // 2048 words
     parameter DATA_WIDTH = 32;
 
+    reg clk;
+    reg rst_n;
+
     reg [1:0] pc_sel;
     reg [ADDR_WIDTH-1:0] alu_addr;
     reg [ADDR_WIDTH-1:0] imm_addr;
     
-    reg clk;
-    reg rst_n;
-
     reg cntlr_rd;
     wire [DATA_WIDTH-1:0] cntlr_rd_data;
     wire cntlr_rd_valid;
@@ -115,49 +19,28 @@ module fetch_top();
     reg [ADDR_WIDTH-1:0]cntlr_waddr;
     reg [DATA_WIDTH-1:0]cntlr_wr_data;
 
-    wire mem_rd;
-    wire [ADDR_WIDTH-1:0]mem_rd_addr;
-    wire [DATA_WIDTH-1:0]mem_rd_data;
-
-    wire mem_wr;
-    wire [ADDR_WIDTH-1:0]mem_wr_addr;
-    wire [DATA_WIDTH-1:0]mem_wr_data;
+    
 
     fetch #(
         .ADDR_WIDTH(ADDR_WIDTH),
         .DATA_WIDTH(DATA_WIDTH)
     ) fetch_inst (
+        .clk(clk),
+        .rst_n(rst_n),
+
         .pc_sel(pc_sel),
         .alu_addr(alu_addr),
         .imm_addr(imm_addr),
-        .clk(clk),
-        .rst_n(rst_n),
+    
         .cntlr_rd(cntlr_rd),
         .cntlr_rd_data(cntlr_rd_data),
         .cntlr_rd_valid(cntlr_rd_valid),
         .cntlr_wr(cntlr_wr),
         .cntlr_waddr(cntlr_waddr),
-        .cntlr_wr_data(cntlr_wr_data),
-        .mem_rd(mem_rd),
-        .mem_rd_addr(mem_rd_addr),
-        .mem_rd_data(mem_rd_data),
-        .mem_wr(mem_wr),
-        .mem_wr_addr(mem_wr_addr),
-        .mem_wr_data(mem_wr_data)
-    );
+        .cntlr_wr_data(cntlr_wr_data)
+        );
 
-    sram_8kb #(
-        .ADDR_WIDTH(ADDR_WIDTH),
-        .DATA_WIDTH(DATA_WIDTH)
-    ) sram_inst (
-        .clk(clk),
-        .rd_en(mem_rd),
-        .rd_addr(mem_rd_addr),
-        .rd_data(mem_rd_data),
-        .wr_en(mem_wr),
-        .wr_addr(mem_wr_addr),
-        .wr_data(mem_wr_data)
-    );
+
 
     always #5 clk = ~clk;
 
@@ -213,7 +96,7 @@ module fetch_top();
         // -----------------------------
         // 2) Controller Read Sequence
         // -----------------------------
-        $display("\n==== TEST 2: CONTROLLER READS ====");
+        
 
         @(negedge clk);
         cntlr_rd = 1;
@@ -222,7 +105,7 @@ module fetch_top();
 
         // Wait for valid read data
         wait(cntlr_rd_valid == 1);
-        $display("Controller Read Data = %h at time %0t", cntlr_rd_data, $time);
+
 
         // -----------------------------
         // 3) PC based fetch (pc_sel=0)
@@ -239,20 +122,39 @@ module fetch_top();
         $display("\n==== TEST 4: ALU BASED FETCH ====");
 
         pc_sel = 2'b01;
-        alu_addr = 11'd5;  // should fetch 32'hA5A5_0001
-        repeat(3) @(negedge clk);
+        imm_addr = 11'd5;  // should fetch 32'hA5A5_0001
+         
+        @(negedge clk);
+        cntlr_rd = 1;
+        @(negedge clk);
+        cntlr_rd = 0;
 
-        alu_addr = 11'd6;  // should fetch 32'hA5A5_0002
-        repeat(3) @(negedge clk);
+        pc_sel = 2'b01;
+        imm_addr = 11'd6;
 
-        // -----------------------------
-        // 5) IMM based fetch (pc_sel=2)
-        // -----------------------------
-        $display("\n==== TEST 5: IMM BASED FETCH ====");
+        @(negedge clk);
+        cntlr_rd = 1;
+        @(negedge clk);
+        cntlr_rd = 0;
 
-        pc_sel = 2'b10;
-        imm_addr = 11'd7;  // should fetch 32'hA5A5_0003
-        repeat(3) @(negedge clk);
+        pc_sel = 2'b01;
+        imm_addr = 11'd6;
+
+        @(negedge clk);
+        cntlr_rd = 1;
+        @(negedge clk);
+        cntlr_rd = 0;
+
+        pc_sel = 2'b01;
+        imm_addr = 11'd7;
+
+        @(negedge clk);
+        cntlr_rd = 1;
+        @(negedge clk);
+        cntlr_rd = 0;
+
+        
+
 
         // Finish
         #50;
