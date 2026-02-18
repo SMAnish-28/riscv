@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/maham/verilog/iccm/iccm.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/maham/verilog/iccm/iccm.srcs/sources_1/new/dpram_2048x32.v,1769700332,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/fetch_int.v,,dpram_2048x32,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/8ksram.v,1769443541,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/fetch.v,,sram_8kb,,,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/8ksram_tb.v,1770902718,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/pc_tb.v,,sram_8kb_tb,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/ccm_controller.v,1770902722,systemVerilog,,,,ccm_controller,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/ccm_controller_tb.v,1770902727,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/fetch_top.v,,ccm_controller_tb,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/fetch.v,1769446252,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/8ksram.v,,fetch,,,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/fetch_int.v,1770902735,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/8ksram_tb.v,,fetch_int,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/fetch_top.v,1769446527,verilog,,,,fetch_top,,,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/pc.v,1770902744,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/fetch.v,,pc_block,,uvm,,,,,,
+C:/iverilog/bin/Verilog/riscv/ccm/pc_tb.v,1770902750,verilog,,C:/iverilog/bin/Verilog/riscv/ccm/ccm_controller_tb.v,,program_counter_tb,,uvm,,,,,,

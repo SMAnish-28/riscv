@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/pc.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/fetch.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/8ksram.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/ccm_controller.v" \
+
+verilog xil_defaultlib  \
+"../../../../iccm.srcs/sources_1/new/dpram_2048x32.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/fetch_int.v" \
+
+sv xil_defaultlib  \
+"../../../../iccm.srcs/sources_1/new/iccm_bist.sv" \
+
+verilog xil_defaultlib  \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/8ksram_tb.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/pc_tb.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/ccm_controller_tb.v" \
+"../../../../../../../../iverilog/bin/Verilog/riscv/ccm/fetch_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
