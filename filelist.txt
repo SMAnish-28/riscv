@@ -1,0 +1,7 @@
+#fetch.v
+#fetch_int.v
+#C:\Users\maham\verilog\iccm\iccm.srcs\sources_1\new\iccm_bist.sv
+pc.v
+#ccm_controller.v
+#C:\Users\maham\verilog\iccm\iccm.srcs\sources_1\new\dpram_2048x32.v
+#fetch_top.v
