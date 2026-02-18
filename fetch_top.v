@@ -6,6 +6,8 @@ module fetch_top();
 
     reg clk;
     reg rst_n;
+    
+    reg bist_en;
 
     reg [1:0] pc_sel;
     reg [ADDR_WIDTH-1:0] alu_addr;
@@ -27,6 +29,10 @@ module fetch_top();
     ) fetch_inst (
         .clk(clk),
         .rst_n(rst_n),
+        
+        .bist_en(bist_en),
+        .bist_pass(),
+        .bist_fail(),
 
         .pc_sel(pc_sel),
         .alu_addr(alu_addr),
@@ -50,7 +56,8 @@ module fetch_top();
 
         // Initialize signals
         clk = 0;
-        rst_n = 0;
+        rst_n = 1;
+        bist_en = 0;
         pc_sel = 2'b00;
         alu_addr = 11'b0;
         imm_addr = 11'b0;
@@ -58,10 +65,15 @@ module fetch_top();
         cntlr_wr = 0;
         cntlr_waddr = 11'b0;
         cntlr_wr_data = 32'b0;
-
+        // Apply reset
+        #17;
+        rst_n = 0;
         // Release reset
-        #15;
+        #17;
         rst_n = 1;
+        #30;
+        bist_en = 1;
+        #20500;
 
         // =====================================================
         // TEST SEQUENCES

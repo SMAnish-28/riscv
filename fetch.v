@@ -6,6 +6,10 @@ module fetch #(
 )(
     input clk,
     input rst_n,
+    
+    input bist_en,
+    output bist_pass,
+    output bist_fail,
 
     input [1:0] pc_sel,
     input [ADDR_WIDTH-1:0] alu_addr,
@@ -45,6 +49,10 @@ module fetch #(
     fetch_int uut_1(
         .clk(clk),
         .rst_n(rst_n),
+        
+        .bist_en(bist_en),
+        .bist_pass(bist_pass),
+        .bist_fail(bist_fail),
 
         .pc_sel(pc_sel),
         .imm_addr(imm_addr),
@@ -67,17 +75,19 @@ module fetch #(
         .mem_wr_data(mem_wr_data)
     );
 
-    sram_8kb sram (
-        .clk(clk),
-        .rd_en(mem_rd),
-        .rd_addr(mem_rd_addr),
-        .rd_data(mem_rd_data),
-        .wr_en(mem_wr),
-        .wr_addr(mem_wr_addr),
-        .wr_data(mem_wr_data)
-    );
     
     
+    dpram_2048x32 u_iccm(
+        .clka(clk),
+        .ena(mem_wr),
+        .wea(mem_wr),
+        .addra(mem_wr_addr),
+        .dia(mem_wr_data),
+        .clkb(clk),
+        .enb(mem_rd),
+        .addrb(mem_rd_addr),
+        .dob(mem_rd_data)
+   );
 
 
 endmodule
