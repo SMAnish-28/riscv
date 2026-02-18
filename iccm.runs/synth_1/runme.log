@@ -1,0 +1,538 @@
+
+*** Running vivado
+    with args -log fetch.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fetch.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Feb 12 19:04:35 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fetch.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/maham/verilog/iccm/iccm.srcs/utils_1/imports/synth_1/fetch.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/maham/verilog/iccm/iccm.srcs/utils_1/imports/synth_1/fetch.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fetch -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9344
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1044.766 ; gain = 469.824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fetch' [C:/iverilog/bin/Verilog/riscv/ccm/fetch.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fetch_int' [C:/iverilog/bin/Verilog/riscv/ccm/fetch_int.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pc_block' [C:/iverilog/bin/Verilog/riscv/ccm/pc.v:4]
+INFO: [Synth 8-226] default block is never used [C:/iverilog/bin/Verilog/riscv/ccm/pc.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'pc_block' (0#1) [C:/iverilog/bin/Verilog/riscv/ccm/pc.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ccm_controller' [C:/iverilog/bin/Verilog/riscv/ccm/ccm_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ccm_controller' (0#1) [C:/iverilog/bin/Verilog/riscv/ccm/ccm_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fetch_int' (0#1) [C:/iverilog/bin/Verilog/riscv/ccm/fetch_int.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sram_8kb' [C:/iverilog/bin/Verilog/riscv/ccm/8ksram.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'sram_8kb' (0#1) [C:/iverilog/bin/Verilog/riscv/ccm/8ksram.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (0#1) [C:/iverilog/bin/Verilog/riscv/ccm/fetch.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1149.625 ; gain = 574.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1149.625 ; gain = 574.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1149.625 ; gain = 574.684
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1149.625 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc]
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[10]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[9]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[8]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[7]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[6]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[5]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[4]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[3]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[2]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[1]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_addr[0]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[31]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[30]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[29]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[28]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[27]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[26]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[25]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[24]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[23]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[22]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[21]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[20]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[19]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[18]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[17]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[16]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[15]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[14]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[13]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[12]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[11]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[10]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[9]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[8]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[7]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[6]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[5]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[4]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[3]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[2]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[1]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd_data[0]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[10]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[9]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[8]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[7]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[6]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[5]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[4]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[3]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[2]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[1]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_addr[0]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[31]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[30]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[29]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[28]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[27]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[26]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[25]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[24]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[23]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[22]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[21]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[20]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[19]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[18]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[17]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[16]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[15]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[14]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[13]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[12]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[11]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[10]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[9]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[8]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[7]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[6]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[5]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[4]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[3]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[2]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[1]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr_data[0]'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_rd'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:190]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:190]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mem_wr'. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc:191]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/maham/verilog/iccm/iccm.srcs/constrs_1/new/nexaa7.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1212.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1212.637 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1212.637 ; gain = 637.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1212.637 ; gain = 637.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1212.637 ; gain = 637.695
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'rd_data_reg' [C:/iverilog/bin/Verilog/riscv/ccm/8ksram.v:52]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1212.637 ; gain = 637.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input   11 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:57 . Memory (MB): peak = 1229.492 ; gain = 654.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+--------------+-----------+----------------------+---------------+
+|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives    | 
++------------+--------------+-----------+----------------------+---------------+
+|fetch       | sram/mem_reg | Implied   | 2 K x 32             | RAM64M x 352  | 
++------------+--------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1346.137 ; gain = 771.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1346.879 ; gain = 771.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+--------------+-----------+----------------------+---------------+
+|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives    | 
++------------+--------------+-----------+----------------------+---------------+
+|fetch       | sram/mem_reg | Implied   | 2 K x 32             | RAM64M x 352  | 
++------------+--------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1360.184 ; gain = 785.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |LUT1   |     1|
+|3     |LUT2   |     3|
+|4     |LUT3   |     1|
+|5     |LUT4   |     3|
+|6     |LUT5   |    33|
+|7     |LUT6   |   358|
+|8     |MUXF7  |   128|
+|9     |RAM64M |   352|
+|10    |FDCE   |   125|
+|11    |FDRE   |     1|
+|12    |LD     |    32|
+|13    |IBUF   |    71|
+|14    |OBUF   |    33|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:01:14 . Memory (MB): peak = 1572.504 ; gain = 934.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:18 . Memory (MB): peak = 1572.504 ; gain = 997.562
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1581.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 512 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1585.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 384 instances were transformed.
+  LD => LDCE: 32 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 352 instances
+
+Synth Design complete | Checksum: b090cb19
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 90 Warnings, 88 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:48 . Memory (MB): peak = 1585.316 ; gain = 1218.438
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1585.316 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/maham/verilog/iccm/iccm.runs/synth_1/fetch.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fetch_utilization_synth.rpt -pb fetch_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 12 19:06:32 2026...
