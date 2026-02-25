@@ -65,7 +65,7 @@ module fetch_int #(
 
     //instantiate pc_module & ccm_controller
 
-    pc_block pc_uut (
+    pc_block u_pc_block (
         .clk(clk), 
         .rst_n(rst_n),
         .pc_en(1'b1),
@@ -82,7 +82,7 @@ module fetch_int #(
     wire [ADDR_WIDTH-1:0]mux_cntlr_waddr = bist_en ? bist_cntlr_waddr : cntlr_waddr;
     wire [DATA_WIDTH-1:0]mux_cntlr_wr_data = bist_en ? bist_cntlr_wr_data : cntlr_wr_data;
     
-    ccm_controller ccm_uut (
+    ccm_controller u_ccm_controller (
         .clk(clk),
         .rst_n(rst_n),
 
