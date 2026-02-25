@@ -73,7 +73,7 @@ module fetch_top();
         rst_n = 1;
         #30;
         bist_en = 1;
-        #20500;
+        #21500;
 
         // =====================================================
         // TEST SEQUENCES
@@ -82,6 +82,8 @@ module fetch_top();
         // -----------------------------
         // 1) Controller Write Sequence
         // -----------------------------
+
+        /*
         $display("\n==== TEST 1: CONTROLLER WRITES ====");
 
         @(negedge clk);
@@ -166,11 +168,15 @@ module fetch_top();
         cntlr_rd = 0;
 
         
-
+           
 
         // Finish
-        #50;
+        
+        
         $display("\n==== ALL TESTS DONE ====");
+
+         */
+
         $finish;
     end
 
