@@ -35,6 +35,22 @@ module fetch #(
     */
 );
 
+    /*  VIVADO XDC CONNECTIVITY :-
+        ========================
+        switch0 : rst_n
+        switch1 : bist_en
+        LED0    : bist_pass
+        LED1    : bist_fail
+
+        TEST PROCEDURE :-
+        ===============
+        step1 : reset high
+        step2 : reset low
+        step3 : bist_en low
+        step4 : reset high
+        step5 : bist_en high
+        step6 : bist_pass LED shd be on       */
+
     wire mem_rd;
     wire [ADDR_WIDTH-1:0]mem_rd_addr;
     wire[DATA_WIDTH-1:0]mem_rd_data;
@@ -46,7 +62,7 @@ module fetch #(
 
     //instantiate fetch_int & block ram
 
-    fetch_int uut_1(
+    fetch_int u_fetch_int(
         .clk(clk),
         .rst_n(rst_n),
         
@@ -77,7 +93,7 @@ module fetch #(
 
     
     
-    dpram_2048x32 u_iccm(
+    dpram_2048x32 u_dpram(
         .clka(clk),
         .ena(mem_wr),
         .wea(mem_wr),
